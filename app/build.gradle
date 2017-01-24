@@ -5,6 +5,7 @@ apply from: '../code_quality_tools/jacoco.gradle'
 apply plugin: 'com.frogermcs.androiddevmetrics'
 apply from: '../code_quality_tools/quality.gradle'
 apply plugin: 'com.github.ben-manes.versions'
+apply plugin: 'me.oriley.crate-plugin'
 
 paperwork {
     set = [
@@ -112,6 +113,7 @@ android {
 
 // Libraries declared in dependencies.gradle in the root of the project
 dependencies {
+    compile 'me.oriley.crate:crate-runtime:0.5.0'
     compile libraries.dagger
     annotationProcessor libraries.daggerCompiler
 

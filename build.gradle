@@ -9,10 +9,11 @@ buildscript {
     repositories {
         jcenter()
         maven { url 'https://plugins.gradle.org/m2/' }
+        maven { url "https://jitpack.io" }
     }
     dependencies {
         // See dependencies.gradle for declaration of plugins.
-
+        classpath 'me.oriley.crate:crate-plugin:0.5.0'
         classpath gradlePlugins.android
 
         // Backport of some Java 8 language features such as Lambdas and method references.
@@ -49,6 +50,7 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url "https://jitpack.io" }
         jcenter()
     }
 
